@@ -7,11 +7,15 @@ const serverUrl = 'http://localhost:1225';
 async function main() {
   // TODO: how do we prove to the server we're on the nice list? 
 
-  const { data: gift } = await axios.post(`${serverUrl}/gift`, {
-    // TODO: add request body parameters here!
-  });
+  await axios.post(`${serverUrl}/gift`, {
+    name: "george orwell"
+  }).then(function (response) {
+    console.log(response.status, response.data);
+  }).catch(function (error) {
+    console.log(error);
+  })
 
-  console.log({ gift });
+  // console.log({ gift });
 }
 
 main();
