@@ -8,7 +8,7 @@ async function main() {
   // TODO: how do we prove to the server we're on the nice list? 
 
   await axios.post(`${serverUrl}/gift`, {
-    name: "george orwell"
+    name: "Chris Windler"
   }).then(function (response) {
     console.log(response.status, response.data);
   }).catch(function (error) {
