@@ -23,11 +23,11 @@ app.post('/gift', (req, res) => {
   const index = niceList.findIndex(n => n === name);
   console.log(index);
   const proof = merkleTree.getProof(index);
-  console.log(proof);
 
   // TODO: prove that a name is in the list 
   let isInTheList = false;
-  if (index > -1) {
+  if (verifyProof(proof, name, MERKLE_ROOT)) {
+    console.log("proof checks out!");
     isInTheList = true;
   }
   if (isInTheList) {
