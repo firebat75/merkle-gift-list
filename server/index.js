@@ -16,7 +16,7 @@ const MERKLE_ROOT = merkleTree.getRoot();
 
 app.post('/gift', (req, res) => {
   // grab the parameters from the front-end here
-  console.log("HELLO TEST");
+
   const body = req.body;
   console.log(body.name);
   const name = body.name;
