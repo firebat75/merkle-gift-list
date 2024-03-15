@@ -2,14 +2,12 @@ const express = require('express');
 const verifyProof = require('../utils/verifyProof');
 const MerkleTree = require('../utils/MerkleTree');
 const niceList = require('../utils/niceList');
-var cors = require('cors')
 
 
 const port = 1225;
 
 const app = express();
 app.use(express.json());
-// app.use(cors())
 
 // TODO: hardcode a merkle root here representing the whole nice list
 // paste the hex string in here, without the 0x prefix
